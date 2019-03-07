@@ -1,6 +1,6 @@
 # What it should look like:
 
-![Fleurimond](Fleurimond.png)
+![Fleurimond](./public/Fleurimond.png)
 
 
 # How It's Made:
