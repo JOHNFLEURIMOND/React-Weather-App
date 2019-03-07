@@ -6,7 +6,7 @@
 # How It's Made:
  This application is done with React, Bootstrap, Boston Fleet Library, Formik, and Yup for form validation.
 ## Optimizations.
-For some reason the data is rendering on the pagy but I am thinking of using a different api and do a complex api with google maps api as well with this.
+For some reason the data isn't rendering on the page at all and no errors and nothing coming out of the console.log for the function getting that data onClick but I am thinking of using a different api and do a complex api with google maps api as well with this.
 
 ## Lessons Learned:
 How to fetch data on a `onClick` of a button.
