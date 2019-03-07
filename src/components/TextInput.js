@@ -23,7 +23,7 @@ export default class TextInput extends React.Component {
                         this.props.error
                             ? 'txt-f txt-f--sm txt-f--err'
                             : 'txt-f txt-f--sm'
-                    }
+                     }
                     placeholder={this.props.placeholder}
                     value={this.props.value}
                     // eslint-disable-next-line
