@@ -5,8 +5,6 @@ import Footer from './components/Footer';
 import Form from './components/Form';
 import Weather from './components/Weather';
 import './App.css';
-// eslint-disable-next-line
-const API_KEY = 'REMOVED_LEGACY_WEATHER_API_CREDENTIAL';
 
 class Wakanda extends React.Component {
   state = {
@@ -18,35 +16,18 @@ class Wakanda extends React.Component {
     error: undefined,
   };
 
-  getWeather = async e => {
+  getWeather = e => {
     e.preventDefault();
-    const city = e.target.elements.city.name.value;
-    const country = e.target.elements.city.country.value;
-    const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
-    );
-    const data = await api_call.json();
 
-
-    if (city && country) {
-      this.setState({
-        temperature: data.main.temp,
-        city: data.name,
-        country: data.sys.country,
-        humidity: data.main.humidity,
-        description: data.weather[0].description,
-        error: '',
-      });
-    } else {
-      this.setState({
-        temperature: undefined,
-        city: undefined,
-        country: undefined,
-        humidity: undefined,
-        description: undefined,
-        error: 'Please enter the values.',
-      });
-    }
+    this.setState({
+      temperature: undefined,
+      city: undefined,
+      country: undefined,
+      humidity: undefined,
+      description: undefined,
+      error:
+        'Weather lookup is temporarily unavailable because the legacy client-side API credential was removed for security.',
+    });
   };
 
   render() {
